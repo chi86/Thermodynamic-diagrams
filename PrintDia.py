@@ -19,7 +19,7 @@ from CoolProp.Plots import SimpleCompressionCycle
 
 
 ############### TS
-fig_x, fig_y = 20, 12
+fig_x, fig_y = 14, 9
 fig=plt.figure(figsize=(fig_x, fig_y))
 ax = fig.gca()
 
@@ -122,8 +122,24 @@ for q in qrange:
 ## isobaric
 
 ax.grid()
+
+
+import matplotlib as mpl
+mpl.use("pgf")
+pgf_with_pdflatex = {
+    "pgf.texsystem": "pdflatex",
+    "pgf.preamble": [
+         r"\usepackage[utf8x]{inputenc}",
+         r"\usepackage[T1]{fontenc}",
+         r"\usepackage{cmbright}",
+         ]
+}
+mpl.rcParams.update(pgf_with_pdflatex)
+
+
 fig.savefig('TS.eps')
-plt.show()
+fig.savefig("TS.pgf", bbox_inches="tight")
+#plt.show()
 ############### TS
 
 
