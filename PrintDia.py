@@ -131,7 +131,6 @@ pgf_with_pdflatex = {
     "pgf.preamble": [
          r"\usepackage[utf8x]{inputenc}",
          r"\usepackage[T1]{fontenc}",
-         r"\usepackage{cmbright}",
          ]
 }
 mpl.rcParams.update(pgf_with_pdflatex)
