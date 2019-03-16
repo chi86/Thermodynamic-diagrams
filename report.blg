@@ -1,15 +1,15 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'report.blg'
-[23] biber:302> INFO - === Fri Mar 15, 2019, 15:52:50
-[35] Biber.pm:359> INFO - Reading 'report.bcf'
-[85] Biber.pm:835> INFO - Found 1 citekeys in bib section 0
-[95] Biber.pm:3670> INFO - Processing section 0
-[106] Biber.pm:3840> INFO - Looking for bibtex format file 'ref.bib' for section 0
-[107] bibtex.pm:1422> INFO - Decoding LaTeX character macros into UTF-8
-[110] bibtex.pm:1279> INFO - Found BibTeX data source 'ref.bib'
-[123] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[123] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[123] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
-[123] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
-[125] bbl.pm:608> INFO - Writing 'report.bbl' with encoding 'ascii'
-[126] bbl.pm:712> INFO - Output to report.bbl
+[20] biber:302> INFO - === Sat Mar 16, 2019, 14:23:27
+[30] Biber.pm:359> INFO - Reading 'report.bcf'
+[77] Biber.pm:835> INFO - Found 1 citekeys in bib section 0
+[86] Biber.pm:3670> INFO - Processing section 0
+[95] Biber.pm:3840> INFO - Looking for bibtex format file 'ref.bib' for section 0
+[96] bibtex.pm:1422> INFO - Decoding LaTeX character macros into UTF-8
+[100] bibtex.pm:1279> INFO - Found BibTeX data source 'ref.bib'
+[112] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[112] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[112] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[112] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[114] bbl.pm:608> INFO - Writing 'report.bbl' with encoding 'ascii'
+[115] bbl.pm:712> INFO - Output to report.bbl

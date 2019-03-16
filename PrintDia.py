@@ -11,10 +11,21 @@ import subprocess,sys,os,copy,datetime
 import numpy as np
 
 import matplotlib.pyplot as plt
+import matplotlib as mpl
+mpl.use("pgf")
 
 import CoolProp.CoolProp as CP
 from CoolProp.Plots import PropertyPlot
 from CoolProp.Plots import SimpleCompressionCycle
+
+
+fluid="R1234yf"
+rrange=np.linspace(10,500,10).tolist()
+prange=np.linspace(4E5,40E5,10).tolist()
+
+rrange=[10,20,50,100,200,300,400,500]
+prange=[1E5,2E5,4E5,6E5,8E5,10E5,12E5,16E5,20E5,25E5,30E5,40E5]
+
 
 
 
@@ -24,32 +35,34 @@ fig=plt.figure(figsize=(fig_x, fig_y))
 ax = fig.gca()
 
 qrange=np.linspace(0,1,10).tolist()
-ts = PropertyPlot('HEOS::R1234yf', 'TS', unit_system='SI', tp_limits='ORC', axis=ax)
+ts = PropertyPlot(fluid, 'TS', unit_system='SI', tp_limits='ORC', axis=ax)
 ts.calc_isolines(CP.iQ, iso_range=qrange, num=10)
+ts.
 
 
-rrange=np.linspace(10,500,10).tolist()
 ts.props[CP.iDmass]['color'] = 'red'
 ts.props[CP.iDmass]['lw'] = '0.5'
-ts.calc_isolines(CP.iDmass,iso_range=rrange, num=10)
+ts.calc_isolines(CP.iDmass,iso_range=rrange, num=len(rrange),rounding=False)
 
 
-prange=np.linspace(4E5,40E5,10).tolist()
 ## isobaric
 ts.props[CP.iP]['color'] = 'green'
 ts.props[CP.iP]['lw'] = '0.5'
-ts.calc_isolines(CP.iP, iso_range=prange, num=10,rounding=False)
+ts.calc_isolines(CP.iP, iso_range=prange, num=len(prange),rounding=False)
 
 ts.draw()
 
 axL=ts.get_axis_limits()
 
+ax.text(axL[0]+60, axL[3]-7,fluid,size=20) 
+
+
 t1=axL[3]-20
 t0=t1-5
 
 for p in prange:
-    s1=CP.PropsSI("Smass","T",t1,"P",p,"HEOS::R1234yf")
-    s0=CP.PropsSI("Smass","T",t0,"P",p,"HEOS::R1234yf")
+    s1=CP.PropsSI("Smass","T",t1,"P",p,fluid)
+    s0=CP.PropsSI("Smass","T",t0,"P",p,fluid)
 
     pA=np.array([s0,t0])
     pB=np.array([s1,t1])
@@ -73,8 +86,8 @@ t1=axL[3]-10
 t0=t1-5
 
 for r in rrange:
-    s1=CP.PropsSI("Smass","T",t1,"Dmass",r,"HEOS::R1234yf")
-    s0=CP.PropsSI("Smass","T",t0,"Dmass",r,"HEOS::R1234yf")
+    s1=CP.PropsSI("Smass","T",t1,"Dmass",r,fluid)
+    s0=CP.PropsSI("Smass","T",t0,"Dmass",r,fluid)
 
     pA=np.array([s0,t0])
     pB=np.array([s1,t1])
@@ -95,11 +108,11 @@ for r in rrange:
 
 
 t1=axL[2]
-t0=t1+5
+t0=t1+8
 
 for q in qrange:
-    s1=CP.PropsSI("Smass","T",t1,"Q",q,"HEOS::R1234yf")
-    s0=CP.PropsSI("Smass","T",t0,"Q",q,"HEOS::R1234yf")
+    s1=CP.PropsSI("Smass","T",t1,"Q",q,fluid)
+    s0=CP.PropsSI("Smass","T",t0,"Q",q,fluid)
 
     pA=np.array([s0,t0])
     pB=np.array([s1,t1])
@@ -124,8 +137,6 @@ for q in qrange:
 ax.grid()
 
 
-import matplotlib as mpl
-mpl.use("pgf")
 pgf_with_pdflatex = {
     "pgf.texsystem": "pdflatex",
     "pgf.preamble": [
@@ -143,7 +154,7 @@ fig.savefig("TS.pgf", bbox_inches="tight")
 
 
 # ############### ph
-# ph = PropertyPlot('HEOS::R1234yf', 'ph', unit_system='SI', tp_limits='ORC')
+# ph = PropertyPlot(fluid, 'ph', unit_system='SI', tp_limits='ORC')
 
 # ph.calc_isolines()
 
@@ -155,7 +166,7 @@ fig.savefig("TS.pgf", bbox_inches="tight")
 
 
 # ############### pd
-# pd = PropertyPlot('HEOS::R1234yf', 'PD', unit_system='SI', tp_limits='ORC')
+# pd = PropertyPlot(fluid, 'PD', unit_system='SI', tp_limits='ORC')
 
 
 # pd.calc_isolines()
@@ -171,7 +182,7 @@ fig.savefig("TS.pgf", bbox_inches="tight")
 
 
 
-# cycle = SimpleCompressionCycle('HEOS::R1234yf', 'TS', unit_system='EUR')
+# cycle = SimpleCompressionCycle(fluid, 'TS', unit_system='EUR')
 # T0 = 300
 # p0 = 5E5
 # #pp.state.update(CoolProp.QT_INPUTS,0.0,T0-10)
