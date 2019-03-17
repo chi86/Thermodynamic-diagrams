@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2019.3.1)  16 MAR 2019 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2019.3.1)  17 MAR 2019 20:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -703,10 +703,10 @@ Package biblatex Info: Reference segment=0 on input line 41.
 (./TS.pgf
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 1807.
+(Font)              size <20.74> substituted on input line 2028.
 
 )
-Overfull \hbox (6.61455pt too wide) in paragraph at lines 1989--50
+Overfull \hbox (14.12099pt too wide) in paragraph at lines 2210--50
 [][]
  []
 
@@ -721,8 +721,8 @@ Package logreq Info: Writing requests to 'report.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  16582 strings out of 494896
- 306984 string characters out of 6180318
- 724721 words of memory out of 5000000
+ 306982 string characters out of 6180318
+ 725721 words of memory out of 5000000
  19629 multiletter control sequences out of 15000+600000
  7799 words of font info for 29 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -733,7 +733,7 @@ nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr
 /share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on report.pdf (1 page, 79675 bytes).
+Output written on report.pdf (1 page, 80821 bytes).
 PDF statistics:
  39 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream
