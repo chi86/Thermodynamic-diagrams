@@ -33,12 +33,12 @@ prange=[1E5,2E5,4E5,6E5,8E5,10E5,12E5,16E5,20E5,25E5,30E5,40E5]
 fig_x, fig_y = 14, 9
 fig=plt.figure(figsize=(fig_x, fig_y))
 ax = fig.gca()
+ax.set_ylim(240,400)
+ax.set_xlim(800,2000)
 
 qrange=np.linspace(0,1,10).tolist()
-ts = PropertyPlot(fluid, 'TS', unit_system='SI', tp_limits='ORC', axis=ax)
+ts = PropertyPlot(fluid, 'TS', unit_system='SI', tp_limits='ORC', axis=ax)#,reciprocal_density=True)
 ts.calc_isolines(CP.iQ, iso_range=qrange, num=10)
-ts.
-
 
 ts.props[CP.iDmass]['color'] = 'red'
 ts.props[CP.iDmass]['lw'] = '0.5'
@@ -50,14 +50,15 @@ ts.props[CP.iP]['color'] = 'green'
 ts.props[CP.iP]['lw'] = '0.5'
 ts.calc_isolines(CP.iP, iso_range=prange, num=len(prange),rounding=False)
 
+
 ts.draw()
 
 axL=ts.get_axis_limits()
 
-ax.text(axL[0]+60, axL[3]-7,fluid,size=20) 
+ax.text(axL[0]+20, axL[3]-7,fluid,size=20) 
 
 
-t1=axL[3]-20
+t1=axL[3]-25
 t0=t1-5
 
 for p in prange:
