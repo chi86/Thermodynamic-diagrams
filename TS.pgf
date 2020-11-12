@@ -6,10 +6,17 @@
 %% Make sure the required packages are loaded in your preamble
 %%   \usepackage{pgf}
 %%
+%% and, on pdftex
+%%   \usepackage[utf8]{inputenc}\DeclareUnicodeCharacter{2212}{-}
+%%
+%% or, on luatex and xetex
+%%   \usepackage{unicode-math}
+%%
 %% Figures using additional raster images can only be included by \input if
 %% they are in the same directory as the main LaTeX file. For loading figures
 %% from other directories you can use the `import` package
 %%   \usepackage{import}
+%%
 %% and then include the figures with
 %%   \import{<path to file>}{<filename>.pgf}
 %%
@@ -88,7 +95,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.599433in,y=0.421212in,,top]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 800}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.599433in,y=0.421212in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 800}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -123,7 +133,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=2.407767in,y=0.421212in,,top]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 1000}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=2.407767in,y=0.421212in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 1000}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -158,7 +171,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=4.216100in,y=0.421212in,,top]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 1200}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=4.216100in,y=0.421212in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 1200}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -193,7 +209,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=6.024433in,y=0.421212in,,top]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 1400}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=6.024433in,y=0.421212in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 1400}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -228,7 +247,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=7.832767in,y=0.421212in,,top]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 1600}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=7.832767in,y=0.421212in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 1600}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -263,7 +285,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=9.641100in,y=0.421212in,,top]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 1800}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=9.641100in,y=0.421212in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 1800}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -298,10 +323,16 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=11.449433in,y=0.421212in,,top]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 2000}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=11.449433in,y=0.421212in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 2000}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=6.024433in,y=0.238373in,,top]{\sffamily\fontsize{10.000000}{12.000000}\selectfont Specific Entropy \(\displaystyle s\) / J/kg/K}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=6.024433in,y=0.238373in,,top]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont Specific Entropy \(\displaystyle s\) / J/kg/K}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -336,7 +367,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.293928in,y=0.468292in,left,base]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 240}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.293928in, y=0.468292in, left, base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 240}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -371,7 +405,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.293928in,y=1.334542in,left,base]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 260}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.293928in, y=1.334542in, left, base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 260}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -406,7 +443,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.293928in,y=2.200792in,left,base]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 280}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.293928in, y=2.200792in, left, base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 280}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -441,7 +481,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.293928in,y=3.067042in,left,base]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 300}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.293928in, y=3.067042in, left, base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 300}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -476,7 +519,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.293928in,y=3.933292in,left,base]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 320}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.293928in, y=3.933292in, left, base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 320}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -511,7 +557,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.293928in,y=4.799542in,left,base]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 340}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.293928in, y=4.799542in, left, base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 340}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -546,7 +595,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.293928in,y=5.665792in,left,base]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 360}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.293928in, y=5.665792in, left, base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 360}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -581,7 +633,10 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.293928in,y=6.532042in,left,base]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 380}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.293928in, y=6.532042in, left, base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 380}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -616,10 +671,16 @@
 \end{pgfscope}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.293928in,y=7.398292in,left,base]{\sffamily\fontsize{10.000000}{12.000000}\selectfont 400}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.293928in, y=7.398292in, left, base]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont 400}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.238373in,y=3.983434in,,bottom,rotate=90.000000]{\sffamily\fontsize{10.000000}{12.000000}\selectfont Temperature \(\displaystyle T\) / K}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.238373in,y=3.983434in,,bottom,rotate=90.000000]{\color{textcolor}\sffamily\fontsize{10.000000}{12.000000}\selectfont Temperature \(\displaystyle T\) / K}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.599433in}{0.518434in}}{\pgfqpoint{10.850000in}{6.930000in}}%
@@ -2025,7 +2086,10 @@
 \pgfusepath{stroke}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.780267in,y=7.145247in,left,base]{\sffamily\fontsize{20.000000}{24.000000}\selectfont R1234yf}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=0.780267in,y=7.145247in,left,base]{\color{textcolor}\sffamily\fontsize{20.000000}{24.000000}\selectfont R1234yf}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \definecolor{textcolor}{rgb}{0.000000,0.501961,0.000000}%
